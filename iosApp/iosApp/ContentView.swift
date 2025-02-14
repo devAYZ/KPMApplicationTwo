@@ -10,6 +10,11 @@ struct ContentView: View {
                     showContent = !showContent
                 }
             }
+            //.buttonStyle(.bordered)
+            .padding()
+            .background(.blue.opacity(0.7))
+            .foregroundColor(.black)
+            .clipShape(Capsule())
 
             if showContent {
                 VStack(spacing: 16) {
@@ -18,7 +23,7 @@ struct ContentView: View {
                         .foregroundColor(.accentColor)
                     Text("SwiftUI: \(Greeting().greet())")
                 }
-                .transition(.move(edge: .top).combined(with: .opacity))
+                .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
