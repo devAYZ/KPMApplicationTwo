@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -22,11 +23,12 @@ import kpmapplicationtwo.composeapp.generated.resources.compose_multiplatform
 fun App() {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
-        Column(Modifier.fillMaxWidth(),
+        Column(
+            Modifier
+            .fillMaxWidth()
+            .padding(vertical = 50.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text("Test 1")
-            Text("Test 2")
             Button(onClick = { showContent = !showContent }) {
                 Text("Click me!")
             }
