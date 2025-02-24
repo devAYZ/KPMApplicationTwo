@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -24,9 +25,9 @@ fun App() {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
-            Modifier
-            .fillMaxWidth()
-            .padding(vertical = 50.dp),
+            modifier = Modifier
+            .padding(vertical = 50.dp)
+            .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Button(onClick = { showContent = !showContent }) {
